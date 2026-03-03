@@ -90,7 +90,7 @@ def heatmap(data, row_labels, col_labels, ax=None,
 
     # Show all ticks and labels with their respective list entries
     ax.set_xticks(range(data.shape[1]), labels=col_labels,
-                  rotation=-30, ha="right", rotation_mode="anchor")
+                  rotation=-45, ha="right", rotation_mode="anchor")
     ax.set_yticks(range(data.shape[0]), labels=row_labels)
 
     # Let the horizontal axes labeling appear on top
@@ -100,9 +100,9 @@ def heatmap(data, row_labels, col_labels, ax=None,
     # Turn spines off and create white grid
     ax.spines[:].set_visible(False)
 
-    ax.set_xticks(np.arange(data.shape[1]+1)-0.5, minor=True)
-    ax.set_yticks(np.arange(data.shape[0]+1)-0.5, minor=True)
-    ax.grid(which="minor", color="w", linestyle='-', linewidth=3)
+    ax.set_xticks(np.arange(data.shape[1]), minor=True)
+    ax.set_yticks(np.arange(data.shape[0]), minor=True)
+    ax.grid(which="minor", color="w", linestyle='-', linewidth=1)
     ax.tick_params(which="minor", bottom=False, left=False)
 
     return im, cbar
@@ -196,23 +196,24 @@ def graph_oil_vs_riyal():
     #tickers = ["CL=F", "BRL=X"]
     #tickers = ["CL=F", "RUB=X"]
     currency_list = [
-        "SAR=X",     # Saudi Riyal (Saudi Arabia)
-        "IQD=X",     # Iraqi Dinar (Iraq)
+        # "MXN=X",     # Mexican Peso
+        # "SAR=X",     # Saudi Riyal (Saudi Arabia)
+        # "IQD=X",     # Iraqi Dinar (Iraq)
         "AED=X",     # UAE Dirham (United Arab Emirates)
-        "QAR=X",     # Qatari Rial (Qatar)
-        "TMT=X",     # Turkmenistani Manat (Turkmenistan)
-        "CLP=X",     # Chilean Peso (Chile)
-        "ZMW=X",     # Zambian Kwacha (Zambia)
-        "AUDUSD=X",  # Australian Dollar (Australia)
-        "MRU=X",     # Mauritanian Ouguiya (Mauritania)
-        "MAD=X",     # Moroccan Dirham (Morocco)
-        "GHS=X",     # Ghanaian Cedi (Ghana)
-        "UZS=X",     # Uzbekistani Som (Uzbekistan)
-        "BWP=X",     # Botswana Pula (Botswana)
-        "XOF=X",     # CFA Franc (Côte d'Ivoire/WAEMU)
-        "ETB=X",     # Ethiopian Birr (Ethiopia)
-        "BRL=X",     # Brazilian Real (Brazil)
-        "PYG=X"      # Paraguayan Guarani (Paraguay)
+        # "QAR=X",     # Qatari Rial (Qatar)
+        # "TMT=X",     # Turkmenistani Manat (Turkmenistan)
+        "EURCLP=X",     # Chilean Peso (Chile)
+        # "ZMW=X",     # Zambian Kwacha (Zambia)
+        "EURAUD=X",  # Australian Dollar (Australia)
+        # "MRU=X",     # Mauritanian Ouguiya (Mauritania)
+        # "MAD=X",     # Moroccan Dirham (Morocco)
+        # "GHS=X",     # Ghanaian Cedi (Ghana)
+        # "UZS=X",     # Uzbekistani Som (Uzbekistan)
+        # "BWP=X",     # Botswana Pula (Botswana)
+        # "XOF=X",     # CFA Franc (Côte d'Ivoire/WAEMU)
+        # "ETB=X",     # Ethiopian Birr (Ethiopia)
+        "EURBRL=X",     # Brazilian Real (Brazil)
+        # "PYG=X"      # Paraguayan Guarani (Paraguay)
     ]
 
     commodity_list = [
@@ -240,7 +241,7 @@ def graph_oil_vs_riyal():
 
     #create_saturation_heatmap(covar)
     corr = cov_to_corr(covar)
-    create_saturation_heatmap(corr)
+    # create_saturation_heatmap(corr)
     fig, ax = plt.subplots()
 
     im, cbar = heatmap(corr, tickers, tickers, ax=ax,
