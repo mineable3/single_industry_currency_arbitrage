@@ -214,6 +214,12 @@ def graph_oil_vs_riyal():
         # "ETB=X",     # Ethiopian Birr (Ethiopia)
         "EURBRL=X",     # Brazilian Real (Brazil)
         # "PYG=X"      # Paraguayan Guarani (Paraguay)
+        "KO",
+        "PEP",
+        "MSFT",
+        "AAPL",
+        "V",
+        "MA",
     ]
 
     commodity_list = [
@@ -231,7 +237,7 @@ def graph_oil_vs_riyal():
     tickers = currency_list + commodity_list
     
     # 2. Download historical data (Last 2 years)
-    raw_data = yf.download(tickers, period="1y", interval="1d")['Close']
+    raw_data = yf.download(tickers, period="10y", interval="1d")['Close']
     raw_data = raw_data.dropna()
     
     # Clean data (drop missing values if markets were closed on different days)
