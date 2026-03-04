@@ -21,14 +21,14 @@ favorable exchange rate. Now you are holding $101 USD and have profited $1 USD.
 
 # Why is this strategy unfeasible? 
 
-Currency (forex, FX, or foreign exchange) markets and commodity markets (or
+1. Currency (forex, FX, or foreign exchange) markets and commodity markets (or
 their futures) are highly efficient and liquid by definition. This means there
 is very little alpha to capture. Without high-speed trading capabilities, the
 market would move before we could execute a trade, and even if we did execute,
 another firm may have captured that efficiency by the time the trade goes
 through. 
 
-Due to the nature of single-industry economies being unstable, most of these
+2. Due to the nature of single-industry economies being unstable, most of these
 countries do not issue fiat money (money that has worth because the government
 says it does). Influenced by the Bretton Woods, most of countries with an
 unstable currency will peg it to the USD at a fixed exchange rate. This
@@ -36,7 +36,7 @@ eliminates any arbitrage opportunity because the currency almost always trades
 at that exchange rate (give or take fractions of a cent to increase liquidity
 of a trade). 
 
-The final reason this strategy is unfeasible is the returns. The fluctuations
+3. The final reason this strategy is unfeasible is the returns. The fluctuations
 of exchange rates are very small even with floating exchanges and almost
 non-existent on managed or pegged currencies. This means we would need a
 massive amount of capital (or leverage) to achieve any meaningful returns. 
